@@ -11,6 +11,12 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 // your code here
+let sumArray=function(array){
+  if(array.length===0){
+    return 0;
+  }
+  return array[0]+sumArray(array.slice(1));
+}
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

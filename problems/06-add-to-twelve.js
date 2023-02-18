@@ -13,6 +13,17 @@ addToTwelve([1]); // false
 ***********************************************************************/
 
 // your code here
+let addToTwelve=function(arr){
+  if(arr.length<2){
+    return false;
+  }
+  if(arr[0]+arr[1]===12){
+    return true;
+  }else{
+    return addToTwelve(arr.slice(1));
+  }
+  
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

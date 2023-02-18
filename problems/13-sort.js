@@ -23,8 +23,29 @@ sort([]); // []
 
 function sort(nums, sorted = []) {
   // your code here
-}
+  if (nums.length===0){
+    return sorted;
 
+  }
+  
+  else{
+   let small= nums.reduce(
+      function(accum,current){
+
+        if(current<accum){
+          return current;
+        }
+        return accum;
+      }
+    );
+    sorted.push(small);
+    nums.splice(nums.indexOf(small),1);
+    sort(nums,sorted);
+
+  }
+  return sorted;
+}
+console.log(sort([4,1,6,3,1,7]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sort;

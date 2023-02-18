@@ -12,7 +12,14 @@ isSorted([5, 4, 3, 2, 1]); // false
 
 // your code here
 let isSorted=function(array){
-  
+ if(array.length<=1){
+  return true;
+ }
+ if(array[0]<array[1]){
+  return isSorted(array.slice(1));
+ }else{
+  return false;
+ }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

@@ -20,7 +20,15 @@ fibonacci(10); // 55
 ***********************************************************************/
 
 // your code here
-  
+  let fibonacci=function(num){
+    if(num<=1){
+      return num;
+    }else{
+      return fibonacci(num-1)+fibonacci(num-2);
+    }
+    
+  }
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = fibonacci;

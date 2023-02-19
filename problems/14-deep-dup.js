@@ -37,6 +37,22 @@ console.log(x[0] === y[0]) // true
 ***********************************************************************/
 
 // your code here
+let deeDup=function(array){
+  if(Array.isArray(array)!==true){
+    return array;
+  }
+  
+  let newArray=array.map(
+    function(item){
+      if(Array.isArray(item)){
+        return deeDup(item);
+      }else{
+        return item;
+      }
+    }
+  );
+  return newArray;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

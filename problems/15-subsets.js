@@ -13,8 +13,17 @@ Hint: For subsets([1, 2, 3]), there are two kinds of subsets:
   2. For every subset that does not contain 3, there is also a corresponding
      subset that is the same, except it also does contain 3.
 ***********************************************************************/
-
 // your code here
+let subsets=function(array,i=0,subset=[],subsetsArray=[]){
+  if(i===array.length){
+    subsetsArray.push(subset);
+  }else{
+    subsets(array,i+1,subset.concat([array[i]]),subsetsArray);
+    subsets(array,i+1,subset,subsetsArray);
+  }
+  return subsetsArray;
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

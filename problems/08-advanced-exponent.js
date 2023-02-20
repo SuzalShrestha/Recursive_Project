@@ -39,9 +39,34 @@ be recursively calling `advancedExponent`. Find a way to visually see how many
 times `advancedExponent` is being recursively called.
 ***********************************************************************/
 
-
-function advancedExponent(b, n) {
+function exponent(b, n) {
   // your code here
+  if(n===0){
+    return 1; 
+  }else if (n % 2 === 0) {
+    let y = exponent(b, n / 2);
+    return y * y;
+  }else{
+    return b*exponent(b,n-1);
+  }
+}
+
+function advancedExponent(base, power) {
+  // your code here
+  if (power == 0){
+  return 1;
+  }else if(power===1){
+    return base;
+  }
+
+else if(power%2===0){
+  let num2=exponent(base,power/2);
+  return num2*num2;
+}else if(power%2===1){
+  let num=exponent(base,(power-1)/2);
+  return base*num*num;
+  
+}
 }
 
 

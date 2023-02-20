@@ -11,9 +11,13 @@ permutations([1, 2, 3]) // [[1, 2, 3], [1, 3, 2],
                         // [2, 1, 3], [2, 3, 1],
                         // [3, 1, 2], [3, 2, 1]]
 ***********************************************************************/
-
+//write function with recursion to find permutation of an array?
 // your code here
+let permutations=function(){
 
+  
+
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = permutations;

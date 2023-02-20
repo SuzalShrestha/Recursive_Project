@@ -14,16 +14,16 @@ range(7, 6); // []
 // your code here
 let range=function(startNum,endNum){
   
-if(startNum>endNum){
+if(startNum>endNum-1){
   return [];
 }
-else {
+
   var countArray=range(startNum+1,endNum);
   countArray.unshift(startNum);
   return countArray;
-}
-}
 
+}
+console.log(range(2,6));
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = range;

@@ -35,23 +35,18 @@ console.log(x[0] === y[0]) // true
 
 
 ***********************************************************************/
-
 // your code here
-let deeDup=function(array){
-  if(Array.isArray(array)!==true){
-    return array;
+const deepDup = arr => {
+  /* base case, Checking if the input is an array. If it is not an array, it returns the input. */
+  if (!Array.isArray(arr)) {
+    return arr;
   }
-  
-  let newArray=array.map(
-    function(item){
-      if(Array.isArray(item)){
-        return deeDup(item);
-      }else{
-        return item;
-      }
-    }
-  );
-  return newArray;
+  const dup = [];
+  /* recursive case, Iterating through the array and pushing the result of calling deepDup on each element of the input array into the new array. */
+  for (let i = 0; i < arr.length; i++) {
+    dup.push(deepDup(arr[i]));
+  }
+  return dup;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

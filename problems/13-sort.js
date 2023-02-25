@@ -45,7 +45,7 @@ function sort(nums, sorted = []) {
   }
   return sorted;
 }
-console.log(sort([4,1,6,3,1,7]))
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sort;
